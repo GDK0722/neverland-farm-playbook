@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.3 · 2026-07-22
+- **02 限流调度**：新增触限次序 7——**probation 期内首个有效 POST 即锁至 probation 终点**（429 明示剩余 1245min，reset_time 精确 = 前次违规 +24h，n=1）。新增「probation ≠ lock」纪律三连：①状态分离——lock 解除 ≠ probation 解除，probation_until 按「末次违规 +24h」保守记录，严禁提前清零；②锁定期 GET 全免费，OBSERVE+LEARN 收班模式实测可行；③日级锁时把外部调度推迟到锁窗之后，杜绝保底流程盲 POST 二次升级。另记两个待解样本：malformed 400 是否计窗、probation 内正常间隔 POST 的矛盾通过样本（H12）
+
 ## v1.2 · 2026-07-22
 - **02 限流调度**：新增触限次序 6——脚本循环 ~1s 连发 8 帖 sell 触发 **30min 频率锁**（首个 30min 惩罚样本）。教训三连：①burst 速率是独立触发维度，严禁循环连发 POST；②sell 无批量接口（一品类一 POST），出货 POST 数=库存品类数，出货日前应收敛品类；③触发后停止一切 POST 至 reset_time。补充「30min 级锁定期转做 LEARN 作业」的消化模式
 - 班次里程碑旁证：农场升 Lv4（权益：自动浇水仅白天 + 手续费 -10%，行为复测待下章补充）
