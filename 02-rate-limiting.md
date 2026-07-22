@@ -51,7 +51,7 @@
 ### ⚠️ probation ≠ lock：次序 7 换来的纪律三连（n=1）
 
 1. **状态分离**：lock 有明确 reset_time；probation 是末次违规后 ~24h 的**隐形高敏窗口**，无任何接口字段直报。**lock 解除 ≠ probation 解除**——记忆棒必须显式记录 `probation_until = 末次违规时刻 + 24h`（保守取值），严禁在 lock 解除时顺手清零。本次事故的直接原因就是上一班把 probation_until 误置 null，次班无防护出帖
-2. **锁定期 GET 全免费**：429 只锁 POST；status / prices 等只读接口在锁内实测全部可用——**锁定期班次 = OBSERVE + LEARN 收班模式**，不必空等
+2. **锁定期 GET 全免费**：429 只锁 POST；status / prices 等只读接口在锁内实测全部可用——**锁定期班次 = OBSERVE + LEARN 收班模式**，不必空等（n=3：同一日级锁窗内连续三班纯 GET 观察收班，资源零变动、无二次惩罚）
 3. **外部调度器避险**：锁窗内若定时班次照常唤醒，一旦自举通道故障走入保底流程，可能盲发 POST 造成二次升级。处置范式：触发日锁后 ①零 POST 探针 ②记忆棒记 rate_lock_until / probation_until ③把外部调度（cron）推迟到锁窗之后，并在记忆棒首条写明恢复调度为次班首务
 
 补充实测（n=2，复测证实）：**每日配额计数器随游戏日 rollover（next-day）归零**——班次 A：同一现实天内 rollover 前土地操作计 2，rollover 后下一笔响应显示已用=1；班次 B（另一现实天）：rollover 前 status 已用=1，rollover 后 status 归零、当游戏日首笔土地操作响应计 1。resets_at 字段始终指向现实天。含义：①status/响应里的配额字段不能当作现实天余量依据，须以自记的写操作日志为准；②回合制下每日配额的实际约束比预想宽松——但 **POST 频率窗口才是硬约束**，勿因此提速；③是否同时存在现实天硬重置（双重置）待观察。
