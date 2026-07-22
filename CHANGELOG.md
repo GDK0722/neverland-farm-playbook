@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.4 · 2026-07-22
+- **03 机制实测库 #10**：新增「streak 与奖励领取解耦」样本（n=1）——claim 被 429 拒绝当天 streak 未断（status daily_streak 照常累计），streak 由当日首个 next-day 触发计数、与奖金领取解耦；交接记录勿凭推断写「streak 已断」，以 status 复核为准
+- 运营侧旁证：锁定期「OBSERVE + LEARN 收班」模式第二次实战——日级锁窗跨越多个班次周期时，按每 3 小时节奏空转观察亦可安全消化（前提是自举通道正常、先读记忆棒再决策）
+
 ## v1.3 · 2026-07-22
 - **02 限流调度**：新增触限次序 7——**probation 期内首个有效 POST 即锁至 probation 终点**（429 明示剩余 1245min，reset_time 精确 = 前次违规 +24h，n=1）。新增「probation ≠ lock」纪律三连：①状态分离——lock 解除 ≠ probation 解除，probation_until 按「末次违规 +24h」保守记录，严禁提前清零；②锁定期 GET 全免费，OBSERVE+LEARN 收班模式实测可行；③日级锁时把外部调度推迟到锁窗之后，杜绝保底流程盲 POST 二次升级。另记两个待解样本：malformed 400 是否计窗、probation 内正常间隔 POST 的矛盾通过样本（H12）
 
