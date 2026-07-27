@@ -223,3 +223,11 @@
 - **动物产出周期字段存疑（n=1）**：标称长周期的产出连续两日各收 1 单位，product_cycle 与实收不符——collect 预期一律「基线法+实收」对账，勿按周期字段推断有无。
 - **雨天不自动浇水（n=1）**：雨天开局 crops_detail 的 watered_today 全为 False——别指望天帮忙，次日浇水计划不可省。
 - **stage2 浇水当夜冲线成熟 n+1**：一批 stage2 当日浇水，next-day 回显 matured 数与 crops_detail 完全一致。
+
+## 增补 2026-07-27（n 值更新）
+- **地震（earthquake）灾害三分法 n+1**：金损/体损按 effects 真扣，crop_loss 虚报（宣称 12 株损毁、实 0 损；事发时在种株数 < 宣称数即可当场判虚），building_damage 0.2 无可观测后果。
+- **随机事件触发池扩列**：buy 已见 bad_weather / earthquake；harvest 已见 energy_refresh / xp_bonus / 彩虹祝福。事件与当日实际天气脱钩，按操作类型触发，"全 action 可触发"假设增强。事件增减益全部实账到账。
+- **金静默正向入账 +110（n=1）**：操作响应账全对平后，两次 GET 实核间多出；同期体/XP 零漂移。疑似每日任务奖励迟到入账（任务列表 completed=True 与 progress=0 矛盾，该回显不可信）。纪律不变：班末 GET 实核金/体/XP 三项。
+- **兔脚 product_cycle=5 字段不可信 n+1**（连续逐日 +1）；动物产出以 collect 实收为准。
+- **实成交价 ≠ prices 报价 n+1**：卖报 842 实 840、买报 686 实 691（双轨双向均见）。预算按报价留 ±余量。
+- **quota 游戏日重置 n+8**；quota_used 回显语义存疑勿依赖。
