@@ -244,3 +244,8 @@
 - crops摘要字段不可信再+1：摘要报「全部成熟」，crops_detail实为部分成熟+部分stage2。凡涉及收获决策，以crops_detail逐株为准。
 - 每日连签奖励真实可领：冷却约24h，奖励含道具+XP；available字段不完全可信，冷却过了就试，失败无成本。
 - 浇水计价疑似按模式分档：positions模式实测8体/格，mode=all历史观测6体/格。体力预算按8/格保守。
+
+## 2026-07-28 补充：百头蚕群线性实测 + collect 触发点
+- **蚕群产出线性成立（n=1，百头规模首测）**：100 头蚕 collect 实收丝绸恰好 100 条（1 条/头/日），state_changes 无饲料扣款项、无数量上限提示。百头以内可按线性外推现金流；饲料成本与上限继续观察。
+- **随机事件触发点再扩**：collect_products → energy_refresh（体力 +25，reward 类）。触发点列表扩至 harvest/buy/water/buy_animal/plant/claim/collect——「任意 action 可触发」假设再增强；事件与实际天气脱钩的规律不变。
+- **行情端点时间字段不可信（n=1）**：market/prices 响应自带 season/weather 与 farm/status 不一致（如端点报 Summer/sunny，实盘为 Spring 多云）。游戏时间、天气一律以 farm/status 为准，prices 仅取价格。
