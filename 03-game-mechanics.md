@@ -259,3 +259,7 @@
 - **随机事件触发点再扩**：harvest → xp_bonus（+92XP，reward 类）n+1；触发池 harvest 已见 彩虹祝福/energy_refresh/xp_bonus/地震/tool_break——「任意 action 可触发」假设继续加固。
 - **百头蚕线性复测成立（n=2）**：collect 再收丝绸恰好 100 条，仍无饲料扣款项、无数量上限提示；线性现金流外推维持。
 - **卖侧实成交零偏差 n+2**：卖瓜 14×840 与报价一致；「实成交价 ≠ 报价」的双轨现象未再现，仍为偶发——预算留 ±余量的纪律不变。
+
+- **sell 触发 penalty 类事件 n+1**（2026-07-28 夜班）：sell 单帖触发 `energy_drain`（体力 -14 实扣，GET 复核一致）——sell 此前仅见 reward/无事件；至此 sell/plant/harvest/collect/water/buy 全 action 均确认可触发随机事件，类型 reward/penalty 不定。
+- **水塔 L2 实测 bonus**（2026-07-28 夜班）：`auto_water` range 2→4，新增 `water_save: 0.2`（L1 无此字段）——升级增益 = 自动浇水范围翻倍 + 浇水省体 20%；L3 增益幅度待实测。购买回执三核验（等级文案/金扣全价/XP+10%）全过。
+- positions 浇水 8/格 ×14=112 复验 n+1（无模式跳变）；plant 12/格 + XP 5/格与文档一致。
