@@ -231,3 +231,9 @@
 - **兔脚 product_cycle=5 字段不可信 n+1**（连续逐日 +1）；动物产出以 collect 实收为准。
 - **实成交价 ≠ prices 报价 n+1**：卖报 842 实 840、买报 686 实 691（双轨双向均见）。预算按报价留 ±余量。
 - **quota 游戏日重置 n+8**；quota_used 回显语义存疑勿依赖。
+
+## 增补 2026-07-28（事件池 + 交易价不对称）
+- **tool_break（工具损坏，新事件类型首录）**：harvest 触发，effects gold_loss 真扣（GET 实核对平 n=1）。随机事件池更新：harvest 已见 彩虹祝福 / energy_refresh / xp_bonus / 地震 / tool_break；buy 已见 bad_weather / 地震——"全 action 可触发"假设继续增强。规律不变：事件增减益迄今全真账到账，但灾害类 crop_loss 有虚报前科，任何损失文案一律 GET 实核。
+- **实成交价 ≠ 报价：同日双向不对称 n+1**：卖侧实成交 = 报价 +2，买侧实成交 = 报价零偏差。偏差方向与幅度不固定——预算按报价留 ±余量、成交后 GET 实核金账的纪律不变。
+- **兔脚 product_cycle=5 字段不可信 n+2**（连续逐日 +1）；collect 惰性结算 n+4（products_generated=0 时照收）。动物产出预期一律基线法+实收对账。
+- **生长节律再加固**：stage2 浇水当夜冲线成熟 n+2；种后 +2 天律 n+8；water mode=all 6/格 n+7。
