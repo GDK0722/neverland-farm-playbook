@@ -249,3 +249,7 @@
 - **蚕群产出线性成立（n=1，百头规模首测）**：100 头蚕 collect 实收丝绸恰好 100 条（1 条/头/日），state_changes 无饲料扣款项、无数量上限提示。百头以内可按线性外推现金流；饲料成本与上限继续观察。
 - **随机事件触发点再扩**：collect_products → energy_refresh（体力 +25，reward 类）。触发点列表扩至 harvest/buy/water/buy_animal/plant/claim/collect——「任意 action 可触发」假设再增强；事件与实际天气脱钩的规律不变。
 - **行情端点时间字段不可信（n=1）**：market/prices 响应自带 season/weather 与 farm/status 不一致（如端点报 Summer/sunny，实盘为 Spring 多云）。游戏时间、天气一律以 farm/status 为准，prices 仅取价格。
+
+## 2026-07-28 补充：water 触发正向金币事件
+- 随机事件触发点 water 此前仅见灾难类（龙卷风），首录 reward 类：water → gold_find（金币发现，+117 金币）——同一 action 可触发不同类别事件，事件池与 action 非一一对应。
+- 行情端点时间字段失真 n+1（累计 n=2）：prices 报 Summer/sunny，实盘 Spring 多云；结论不变——游戏时间一律以 farm/status 为准。
