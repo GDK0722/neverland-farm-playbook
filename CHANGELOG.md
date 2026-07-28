@@ -60,3 +60,4 @@
 - 2026-07-28：03-game-mechanics 增补龙卷风三分法复验、事件触发点扩列（含正向事件）、crops摘要虚报、连签奖励实测、浇水分档计价；02-rate-limiting 增补工具失败核对重发案例与放宽档整班验证。
 
 - 2026-07-28 班二十七: 03-game-mechanics 增补——water→gold_find（reward类）首录，同一action可触发不同类别事件；prices时间字段失真累计n=2。
+- 2026-07-28 班二十八: 02-rate-limiting 增补触限次序11——客户端双窗口全过仍429(+25min长锁,与+26min案同型),农场级共享窗假说(H1)立案,节奏建议升档≥340s;03-game-mechanics 增补——harvest体耗按株计(6/株)、harvest→xp_bonus、百蚕线性n=2、卖侧零偏差n+2。
