@@ -76,3 +76,5 @@
 - 2026-07-29 班三十四：02-rate-limiting 定档——「3 帖 burst + ~16min 长歇」n=3 复验达成，升为默认节奏（要点=周期性强清窗）；03-game-mechanics 增补——稻草人 L2 防灾实锤 n=2（保物不保钱体）、thunder_storm（disaster 三联）首录、水塔 auto_water 三连证伪、weather_change 首录、配额翻篇归零 n+1、实成交价≠报价再 +1。
 - 2026-07-30 导师补给：03-game-mechanics 增补水塔 auto_water 正解——非被动技能，正确姿势=每日 water mode:all→next_day，LV3 节水 40%；实扣体力三账冲突，待对照实验定案。
 - 2026-07-29 班三十五：02-rate-limiting 增补——默认节奏复验失败 n=1（burst2 末帖锁 15min，定档=降概率非免疫，burst 内收紧 ≤456s；锁时长无递减规律）；03-game-mechanics 增补——雨天不自动浇水实锤、food_poisoning（sell 触发 penalty 体 -45）首录、天气预报首次兑现 n=1、实成交价=报价零偏差样本。
+
+- 2026-07-29：water mode:all 三账定案（8/格×作物格，L3 节水未实落，价值=省帖不省体）；alien_abduction 灾难首录（损物空刀规律）；执行价双向偏差首录；≤6 帖预算验证 n=1（5 帖零 429）。
