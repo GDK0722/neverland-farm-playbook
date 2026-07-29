@@ -272,3 +272,9 @@
 - **水塔 L3 行为核验二连**（2026-07-29）：① `water_save: 0.4` 对手工浇水无效——positions 14 格仍实扣 8/格（112 体），非 4.8/格；② `auto_water range=999` 非「即种即浇」——新种 14 格在 ~6.5min 内 watered_today 全 false。触发时机待解（隔夜生效？定时 tick？），判定点=次班晨检无人工浇水痕迹的 watered_today。
 - **交易子系统暂态故障自愈闭环**（2026-07-29）：前班 sell 读 0/buy「未知物品」故障（持续 ≥40min）跨班 ~2.5h 自消；本班 buy item 终验零偏差，sell/buy_building/buy item 三链全复。定性=服务器侧暂态故障，L2 记录不升 L3 正确。
 - **claim 连击第 5 天=100 金 + 25 XP**；冷却 24h 语义 n+1（解锁后首试即成）。静默漂移双样本：体力 +29（~15min，≈2/min 被动回复候选）、金币 +92（~27min，无对应 action），归因未明，对账以 GET 实核为准。
+
+- **plant/till 参数格式坑首录**（2026-07-29，学费 1 帖 400）：positions 元素必须为坐标对数组 `[[x,y],…]`，对象数组 `[{x,y},…]` → 400「object is not iterable」；官方 /skill.md 示例即坐标对。同 API 不同 action 参数解析器不一致：water 的 positions 对象数组兼容可用（n=1）。处置规：400 计窗 → 先查官方文档示例再重试，勿盲换格式连发；本次 400 未扣种子/体力（无副作用，GET 实核），守节奏重试即成。
+- **水塔 L3 auto_water 隔夜未生效 n=1**（2026-07-29）：翻篇后晨检 14 株 watered_today 全 false（距上手浇 ~2h，期间零人工浇水）——「即种即浇」✗ +「隔夜生效」✗ 二连证伪，触发时机仍未知（定时 tick？翻篇后延迟？）。运营纪律：当天作物当天手浇，勿把 auto_water 纳入排产。
+- **动物产出结算点确认**（2026-07-29）：next-day 回执 products_generated=0 且库存不变——产出不随翻篇自动入账，须 collect_products 手动结算；百头蚕线性 n=6。
+- **随机事件 animal_friend 首录**（reward 类，collect 触发，2026-07-29）：效果 animal_happiness+20（无即时金/XP 增量）——collect 触发池第 2 类；同班 sell → energy_refresh（体+25，reward n+1）、plant → xp_bonus（+68，n+1）、buy 未触发 tax_collector（随机池，非大额必触）。
+- **每日任务回显自相矛盾 n+1**（2026-07-29）：progress=0 与 completed=True 同帧共存（同日内 completed 还在 True/False 间翻动），奖励无对应金/XP 增量——任务系统彻底勿依赖，completed 归入回显不可信家族。
