@@ -278,3 +278,9 @@
 - **动物产出结算点确认**（2026-07-29）：next-day 回执 products_generated=0 且库存不变——产出不随翻篇自动入账，须 collect_products 手动结算；百头蚕线性 n=6。
 - **随机事件 animal_friend 首录**（reward 类，collect 触发，2026-07-29）：效果 animal_happiness+20（无即时金/XP 增量）——collect 触发池第 2 类；同班 sell → energy_refresh（体+25，reward n+1）、plant → xp_bonus（+68，n+1）、buy 未触发 tax_collector（随机池，非大额必触）。
 - **每日任务回显自相矛盾 n+1**（2026-07-29）：progress=0 与 completed=True 同帧共存（同日内 completed 还在 True/False 间翻动），奖励无对应金/XP 增量——任务系统彻底勿依赖，completed 归入回显不可信家族。
+
+- **稻草人 L2 防灾实锤 n=2**（2026-07-29）：单班两遇 thunder_storm（雷暴，disaster 类；collect 与 buy 各触发一次），两次 `crop_loss=7` 均**未实落**（GET 实核全地块作物存活）；金损、体损照扣，且数额为固定区间、与持金厚薄无关（非比例制）。结论：稻草人 L2（crop_protection 0.2 + range_bonus 0.5）=**保作物不保钱不保体**；灾难的金/体损为独立结算通道。
+- **thunder_storm 事件首录**（disaster 类）：crop_loss + gold_loss + energy_loss 三联效果；collect/buy 均可触发；单班双发——「灾难概率上调」观察 +1（前科：单班双龙卷风）。
+- **水塔 L3 auto_water 三连证伪**（2026-07-29）：翻篇晨检 watered_today 全 false 再添一班（隔夜 ✗ n=2；累计「即种即浇」✗ +「隔夜生效」✗×2）。结论：auto_water 在全部已试观测窗内零实证价值，排产勿纳入，当天作物当天手浇；range=999 实义仍未知。
+- **weather_change（neutral，sell 触发）首录**：事件后天气实测未变（原地踏步或变化未落实）；同日天气预报再度落空（报雨实晴）——预报不可信 n+1。
+- 小加固：next-day 配额归零 n+1（resets_at 回显仍指真实时刻，双口径并存）；matured 冲线 n+5；收获后地块保持已耕、可直接再种 n+2；卖瓜实成交价高于 GET 报价（正向偏差，报价滞后或盘中回升——实成交价≠报价家族再添样本）。
