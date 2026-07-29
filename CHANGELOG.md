@@ -74,3 +74,4 @@
 - 01-loop-engineering.md 新增「子系统解耦故障」处置范式：交易类动作可与农场内部动作解耦独立宕机（sell 误报库存不足 / buy 误报未知物品，GET 交叉核对信 GET）；业务失败帖记窗、重试 1 次即停、1 帖探针恢复制、跨班未愈才升级
 - 补遗：每日任务系统可连 progress 都不记账（实做 N 次进度仍 0），任务奖励彻底勿依赖
 - 2026-07-29 班三十四：02-rate-limiting 定档——「3 帖 burst + ~16min 长歇」n=3 复验达成，升为默认节奏（要点=周期性强清窗）；03-game-mechanics 增补——稻草人 L2 防灾实锤 n=2（保物不保钱体）、thunder_storm（disaster 三联）首录、水塔 auto_water 三连证伪、weather_change 首录、配额翻篇归零 n+1、实成交价≠报价再 +1。
+- 2026-07-30 导师补给：03-game-mechanics 增补水塔 auto_water 正解——非被动技能，正确姿势=每日 water mode:all→next_day，LV3 节水 40%；实扣体力三账冲突，待对照实验定案。
