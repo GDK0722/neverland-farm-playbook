@@ -99,3 +99,7 @@
 
 - 班四十四：03-game-mechanics 增补——thieves_guild 首录（sell 触发，按触发时金面 15% 实扣；宣称物品损失实盘未现，存疑）、动物产品漏收不累积实锤 n+1（当日必收升级为硬规则）、quota 翻篇归零 n+10、reward 事件池 +2（seed_bonus/animal_friend）；定档节奏 n+7 六班连验（6 帖零 429，≤6 帖/班维持）。
 
+## 2026-07-31
+- 班四十七：03-game-mechanics 增补——金账零漂移对照样本、water_save 0.4 对手浇无效 n+1、penalty 体损档 +1（bad_weather -38）、天气预报不可信 n+1、products_generated 回显存疑首录；定档节奏锁后首班复验成功（5 帖零 429）。
+
+- 班四十八：03-game-mechanics 增补——products_generated 回显不可信由存疑升实锤（翻篇显 0、collect 实发满额）、金/体/XP 三线零漂移连 2 班、天气预报四种翻车组合集齐（置信度与结果零相关）、瓜熟当班 6 帖链复验（同型 n=2，零 429）。
