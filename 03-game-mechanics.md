@@ -68,10 +68,20 @@
 
 ## buy_building XP档实锤(2026-08-02)
 - buy_building XP=花费/10(n=1):ancient_ruins L1(官方定价80,000G)→XP+8,000精确;金Δ=-80,000精确,体耗0
-- 建筑config回显即验:ancient_ruins L1 bonus={quality_bonus:0.1, unlock_ancient_crops:true}——品质加成+解锁古代作物;升L2预期quality0.2+treasure_hunt字段(待核)
+- 建筑config回显即验:ancient_ruins L1 bonus={quality_bonus:0.1, unlock_ancient_crops:true}——品质加成+解锁古代作物;升L2预期quality0.2+treasure_hunt字段(已实锤n=2,2026-08-02班二批次:L2官方定价→XP=花费/10精确,config回显quality_bonus:0.2+treasure_hunt:true,三账核验法同过)
 - 三账核验法:买后GET核金Δ/XP档/config bonus字段三项,不齐=停手勿连买下一级
 - 既有结论互证:buy_building的level参数被服务器忽略,每次调用=买下一级按该级全价收费(门廊探针n=2)
 
 ## 产物抢救帖序SOP(2026-08-02)
 - 动物产物按游戏日生成且不累积:当班collect流产(如429停手)时,下班首帖必须先collect再next-day——先翻日则上日产物蒸发,先收则全量挽回零损失
 - 与既有实锤互证:collect不累积n+1(漏收次日collect仍当日整量);此条为流产处置标准流程
+## sell单帖上限与参数名学费(2026-08-02班二批次)
+- ⚠️sell单帖数量上限=1,000实锤(n=1):超量发帖→400『单次操作数量不能超过1000』,失败帖照计限流窗——大额出货先算批次数=⌈N/1000⌉,并纳入当班帖数预算;分批卖出不改变总价,但帖序被强制拉长,冲刺类排程务必预留
+- ⚠️buy_building参数名=building_type实锤(误用item_type→200回包success=false『未知的物品』,quota照计):物品类buy/sell用item_type的经验不可类推到建筑/动物;ACT前grep官方/skill.md对应action_type行——参数名学费第四次,教训升级为『按action查文档,不按品类类推』
+- buy_animal实测:animal_type+quantity,XP=10/只(n=1,蚕);体耗0
+- harvest体耗新档(n=1):16株-90=5.625/株(历史14株-84=6/株)——与water mode:all降费同款非线性,体力预算暂按6/株上限编制
+- 事件xp_bonus档位+61新高(历史31/42/44/50/55,harvest帖触发)
+
+## 优先级冲突裁决样本(2026-08-02班二批次)
+- 场景:卖丝分批(火箭节拍可顺延) vs 扩群必达指令(门廊口谕『不延过两个班次』),帖数预算撞车——裁决:有延迟期限的必达指令>节拍可顺延项;失败帖也计限流窗,排程须把试错成本计入预算
+- 结果:第7帖(超既有≤6帖假说预算)双硬合规下幸存零429;但跨burst长窗配额假说未证伪,超6帖仍为例外而非常态
