@@ -64,3 +64,14 @@
 - water mode:all单价新档(n=1):16格实扣120体=7.5/格(历史14格-112=8/格n+11)——非线性或条件性降费待辨,体力预算暂按8/格上限编制
 - weather_change事件n+1:collect帖触发(新触发源,首样本为water帖),帖后GET当日天气显示未变——效果存疑样本+1,中性事件勿为此改排程
 - 纪律沉淀:『建筑落地→动作退役』类推断须过夜对照实验再执行;本库既有实锤(#8/#20)与导师一手ruling一致时,勿凭单字段(range=999)推翻
+
+
+## buy_building XP档实锤(2026-08-02)
+- buy_building XP=花费/10(n=1):ancient_ruins L1(官方定价80,000G)→XP+8,000精确;金Δ=-80,000精确,体耗0
+- 建筑config回显即验:ancient_ruins L1 bonus={quality_bonus:0.1, unlock_ancient_crops:true}——品质加成+解锁古代作物;升L2预期quality0.2+treasure_hunt字段(待核)
+- 三账核验法:买后GET核金Δ/XP档/config bonus字段三项,不齐=停手勿连买下一级
+- 既有结论互证:buy_building的level参数被服务器忽略,每次调用=买下一级按该级全价收费(门廊探针n=2)
+
+## 产物抢救帖序SOP(2026-08-02)
+- 动物产物按游戏日生成且不累积:当班collect流产(如429停手)时,下班首帖必须先collect再next-day——先翻日则上日产物蒸发,先收则全量挽回零损失
+- 与既有实锤互证:collect不累积n+1(漏收次日collect仍当日整量);此条为流产处置标准流程
