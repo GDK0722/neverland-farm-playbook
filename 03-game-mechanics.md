@@ -108,3 +108,9 @@
 
 ## crops 摘要不可信再添新证（2026-08-03）
 - next-day 回显 `matured=16` 且 crops 摘要 `status=「可收获」`，但 `days_to_harvest=2`（前一日 d3→次日 d2 线性吻合）。**成熟判定唯 days_to_harvest=0**，摘要 status / matured 字段均不可信，勿按摘要提前 harvest。
+
+## 签到连击机制与摘要假阴性（2026-08-03 班七十四样本）
+- claim_daily_bonus 回显『连续访问第N天』≠实发奖励：实发按7天奖励表循环取模（N mod 7）——回显『第10天』实发第3天档（小额金币+XP），取模预期命中 n=1；`available` 字段领后仍 true（说谎 n+13），冷却以实测 ≈24h 锁为准，勿信回显
+- crops 摘要假阴性新样本：next-day 回显 `matured=0`，GET 实核 `days_to_harvest=0` 已全部成熟——摘要/matured 双向不可信（前样本 matured=16 假阳 vs d=2，本样本 matured=0 假阴 vs d=0），成熟判定唯 days_to_harvest=0
+- 建筑 bonus「config 回显≠行为实落」疑案 n=3：产出加成建筑第三班 collect 复验仍按旧产出档实收、XP 档未涨——三班三证，维持『bonus 须次班行为实核后再计入收益模型』判据
+- 定档节奏 n+4：4 帖 4 成零 429（帖间 ~570s + burst≤3 + 长歇 ~16.8min）；water 帖随机事件 gold_find（小额金币档）样本+1；天气预报不可信 n+1（报晴 0.85 实雨）
