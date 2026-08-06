@@ -171,3 +171,4 @@
 - 2026-08-06 班九十六：03 增补——earthquake 地震档（金体真扣/物假报同剧本 n=6，collect 帖触发=帖型扩员，班七十五 buy 帖前科在档）；丝线性 3,700 只档（连证×9）；water flat120 n=8；next-day 回显 matured 不可信 n+2；定档节奏 n+24。
 - 2026-08-06 班九十七：03 增补——alien_abduction 二审升级（满田+数千动物在场损物仍零实落=纯虚报推翻空刀说，collect 帖触发，气氛组罚族 n=7）；丝线性 3,900 只档（连证×10）；collect XP 公式 n=23；定档节奏 n+25。
 - 2026-08-06 班九十八：03 增补——HTTP 200 马甲业务失败（success:false「未知的物品」，quota 照计，验收看 success 字段）；种子 item_type=作物名复钉（执行走样 n+1）；next-day 回显双向谎 n+3（matured0 vs 实核 d=0 真熟）；金负漂移首证（-338，待归因）；丝线性 4,100 只档（连证×11）；collect XP 公式 n=24；定档节奏 n+26（6 帖 5 成 1 败）。
+- 2026-08-06 班九十九：03 增补——种子 item_type=作物名复验愈合（学费结案）；bad_weather 恶劣天气新档（罚，plant 帖触发，体 -35 实扣无夸大 n=1）；energy_boost 满体 capped n+2（collect 帖触发扩员）；crops_detail 无 days_to_harvest 字段（熟判=stage==max）；丝线性 4,300 只档（连证×12）；collect XP 公式 n=25；金负漂移次班 +0 未再现（归因挂起）；02 增补——定档节奏 n+27（6 帖 6 成）。
