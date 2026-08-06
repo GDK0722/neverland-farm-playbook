@@ -612,3 +612,11 @@
 - **water mode:all flat 120 档 n=7 实锤**（20 格恒定 -120 体，与格数无关）；浇水 XP 2/格 n+9。
 - **蚕线性日产 3,500 只档首证（新百位连证×8）**：collect 实收丝数=蚕总数（1 丝/只/天）；collect XP=⌊产品基准价总值/50⌋ 公式 n=21 全中（基准价取 status 内 product_price 口径）。
 - **事件 xp_bonus 奖族再中（+74）**；next-day 盲帖 XP+0 n+26；next-day 回显 grown 数与 GET 实核相符（回显族孤证不翻案，生长判定仍唯 days_to_harvest/growth_stage）。
+
+## 班九十六增补（2026-08-06）：earthquake 地震档实扣复核 / 丝线性 3,700 只档 / flat120 档 n=8
+- **事件 earthquake 地震档（罚族，collect 帖触发）**：文本称「9 株作物损毁+建筑受损 20%+修复费 343+体力消耗 41」。实核：作物一株不少、建筑等级全保持——文本损失全夸大实损 0；**金 -343+体 -41 实扣**（灾害「金体真扣、物假报」同剧本 n=6：wildfire/bird_feast/rain_flood/animal_escape/tornado/earthquake）。注：班七十五已有 buy 帖触发地震前科，本次 collect 帖触发=触发帖型扩员；稻草人 L2 在档，保物不保钱不保体 n=5。
+- **丝线性 3,700 只档 n=1（新百位连证×9）**；collect XP=⌊基准总值/50⌋ n=22 全中；sell 丝 XP=实收 1/30 档 n=12；buy 蚕 XP=实付 5% 档 n+18；执行价零偏差（丝卖 n=12/蚕买 n=14）。
+- **water mode:all flat 120 档 n=8 实锤**（20 格恒定 -120）；浇水 XP 2/格 n+10。
+- **next-day 回显 matured=20 vs GET 实核 d=2 未熟=回显不可信 n+2**；摘要『可收获』谎报 n+4（成熟判定唯 days_to_harvest=0）。
+- quota 回显惰性 n+34；签到回显双谎 n+33；天气预报蒙对 n=8（秋 Day9 晴 0.85 实晴，不改不可信结论）；prices 元信息 weather 字段与 status 矛盾再现（只取价格字段）。
+- 定档节奏 n+24：5 帖 5 成零 429 零 400（帖间 286.7/355.3/270.6/294.2s 双硬合规，任意 600s 窗 ≤3 帖）。
