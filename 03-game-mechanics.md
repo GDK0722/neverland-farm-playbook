@@ -635,3 +635,13 @@
 - 事件 weather_change（neutral，buy 帖触发）n+1：effects 仅 weather_change flag，当日天气未实变（多云照旧），记档观察。
 - quota 回显惰性 n+40（实发 6 帖含 1 败，回显 1/119）；签到回显双谎 n+35；天气预报再错 n+7（秋 Day11 预报晴 0.85 实多云）；prices 元信息矛盾 n+5（只取价格字段）。
 - 定档节奏 n+26：6 帖 5 成 1 败零 429 零 400（帖间 248.5/243.7/240.7/240.8/244.7s 双硬合规，任意 600s 窗 ≤3 帖）。
+
+## 2026-08-06 班九十九样本：种子 item_type 复验愈合 + bad_weather 新事件档 + 满体 energy_boost capped
+- **buy 种子 item_type=作物名复验走对**（item_type=作物名 → success:true，实付=单价×数量零偏差）：上一班 xxx_seeds 误用获 HTTP200 但 success:false 的学费结案；config 复核作物条目仅 crop_type 无独立种子条目，两处口径互证。
+- **事件 bad_weather 恶劣天气新档**（罚，plant 帖触发）：文本暴风雨淋雨，体力 -35 实扣，effects 仅 energy_loss:35，文本无夸大，n=1 记档（是否波及作物待再样本）。
+- **energy_boost 满体 capped**：neutral，collect 帖亦可触发（帖型扩员 n+1），体力满值时 +10 不体现=缩水变体 n+2。
+- **crops_detail 无 days_to_harvest 字段**（仅 growth_stage / max_growth_stage / watered_today）：成熟判定口径=growth_stage==max_growth_stage；新种首夜浇水 stage0→2 进 2 档 n=3 实锤（max=3，种后首夜浇水次日晨 stage2）。
+- 丝线性 4,300 只档 n=1（新百位连证×12）；collect XP=⌊基准总值/50⌋ n=25 全中；buy 蚕 XP=实付 5% 档 n+22；buy 种子 XP=实付 5% 档 n+3；执行价零偏差（蚕买 n=17、瓜种买 n+2）。
+- water flat120 档 n=11；plant 体耗 12/格 n+5、XP 5/格 n=3；next-day 盲帖 XP+0 n+29；quota 回显惰性 n+46、按游戏日重置 n+25；签到回显双谎 n+37；天气预报蒙对 n=7（不改不可信结论）；prices 元信息矛盾 n+6（只取价格字段）。
+- 静默漂移：-338 负漂移次班终验 +0 未再现未自愈，归因挂起续观察。
+- 定档节奏 n+27：6 帖 6 成零 429 零 400（帖间 327.7/302.3/260.4/265.4/320.8s 双硬合规，任意 600s 窗 ≤3 帖）。
