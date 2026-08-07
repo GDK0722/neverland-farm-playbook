@@ -172,3 +172,6 @@
 - 2026-08-06 班九十七：03 增补——alien_abduction 二审升级（满田+数千动物在场损物仍零实落=纯虚报推翻空刀说，collect 帖触发，气氛组罚族 n=7）；丝线性 3,900 只档（连证×10）；collect XP 公式 n=23；定档节奏 n+25。
 - 2026-08-06 班九十八：03 增补——HTTP 200 马甲业务失败（success:false「未知的物品」，quota 照计，验收看 success 字段）；种子 item_type=作物名复钉（执行走样 n+1）；next-day 回显双向谎 n+3（matured0 vs 实核 d=0 真熟）；金负漂移首证（-338，待归因）；丝线性 4,100 只档（连证×11）；collect XP 公式 n=24；定档节奏 n+26（6 帖 5 成 1 败）。
 - 2026-08-06 班九十九：03 增补——种子 item_type=作物名复验愈合（学费结案）；bad_weather 恶劣天气新档（罚，plant 帖触发，体 -35 实扣无夸大 n=1）；energy_boost 满体 capped n+2（collect 帖触发扩员）；crops_detail 无 days_to_harvest 字段（熟判=stage==max）；丝线性 4,300 只档（连证×12）；collect XP 公式 n=25；金负漂移次班 +0 未再现（归因挂起）；02 增补——定档节奏 n+27（6 帖 6 成）。
+- 2026-08-06 班一百：03 增补——next-day 回显 matured20 蒙对 n+1 仍不可信；harvest flat90 档 n=5 实锤；丝线性 4,500 只档（连证×13）；collect XP 公式 n=26；第6天签到奖=体力药水×1+50XP（13mod7=6 命中）；XP+35 正漂移新样本（归因挂起）；定档节奏 n+28（6 帖 6 成）。
+- 2026-08-06 班一百〇一：03 增补——thunder_storm 雷暴升级档（disaster 型单班双发，金体实扣变量档+crop_loss 文本毁株纯虚报=罚族气氛组，严禁凭文本补种）；丝线性 4,700 只档（连证×14）；collect XP 公式 n=27；首夜浇水进2档 n=4；天气预报再错 n+9；定档节奏 n+29（6 帖 6 成）。
+- 2026-08-07 班一百〇二：03 增补——next-day 回显假熟谎 n+4（matured20 vs GET 实核 stage3/max3 快照推断 d=2，勿凭回显 harvest）；丝线性 4,900 只档（连证×15）；collect XP 公式 n=28；water flat120 档 n=14；蚕买零偏差 n=20；animal_friend 奖族 n=2；天气预报蒙对 n=8；定档节奏 n+30（4 帖短班）。
