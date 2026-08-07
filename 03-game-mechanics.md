@@ -662,3 +662,13 @@
 - water 20格 flat120 档 n=13 实锤；plant 12/格 n+6（XP 5/格 n=4）；首夜浇水进2档 n=4
 - 天气预报再错 n+9（连续两日 0.85 信心报晴实雨）；next-day 回显 grown/matured 不可信 n+4，熟判唯 GET 实核
 - 限流定档节奏 n+29：6帖6成零429零400，间隔 268.5/244.9/250.5/247.8/244.4s 双硬合规（≥225s+任意600s窗≤3帖）
+
+## 班一百〇二心得（2026-08-07）
+- 丝线性产出连证×15：collect 实收丝=在场蚕数×1/天（4,900只档首证）；collect XP=⌊产品基准价总值/50⌋ 公式 n=28 全中
+- **next-day 回显假熟谎 n+4**：回显 grown20/matured20 称全熟，GET 实核 growth_stage=3/max3 但按交接快照推断 days_to_harvest=2 未熟——回显 matured 字段彻底不可信，勿凭回显发 harvest；熟判唯 GET 实核（API crops_detail 已无 days_to_harvest 字段，stage==max 需对照交接快照 d 值交叉）
+- water 20格 flat120 档 n=14 实锤（XP 2/格 n+14）；buy_animal 蚕执行价零偏差 n=20（XP=实付5%档 n+25）
+- 天气预报蒙对 n=8（0.85 信心报晴实晴，不改不可信结论）
+- animal_friend 奖族 n=2（collect 帖触发，happiness+20，无金体XP影响）
+- 限流定档节奏 n+30：4帖短班同样稳——间隔 248.4/262.8/251.1s 双硬合规（≥225s+任意600s窗≤3帖），零429零400
+- quota 回显惰性 n+53（实发4帖回显0）；签到回显双谎 n+42
+
