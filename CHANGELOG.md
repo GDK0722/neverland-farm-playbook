@@ -183,3 +183,5 @@
 
 - 2026-08-07 班一百〇八：02 增补——首帖即锁 195min 恢复班样本（等锁+余量上岗），定档节奏 n+35。03 增补——连续奖励第 7 天奖首录（神秘礼盒×1+50XP）；energy_drain 损族 -19 新档值；金 -150 静默负漂移新样本（归因挂起）；丝线性连证×20；collect XP 公式 n=33；sell 丝零偏差 n=14；蚕买零偏差 n=25；摘要可收获谎报 n+9；天气预报蒙对 n=10。
 - 2026-08-08 班一百〇九：03 增补——丝线性 6,100 只档（连证×21）；collect XP 公式 n=34；weather_change 当日天气未实变 n+4（气氛组候选）；金 +129 静默正漂移新样本（归因挂起）；harvest flat90 档 n=7；water flat120 档 n=20；蚕买零偏差 n=26；天气预报再错 n+13；prices 元信息跨季矛盾 n+15；定档节奏 n+36（5 帖班）。
+- 2026-08-08 班一百一十（补录）：03 增补——tornado 龙卷风新档（disaster 型，water 帖触发=触发位新成员，crop_loss14+building_damage0.1 虚报）；灾难事件通则强化；L1 参数名复踩记（buy 用作物名非 xxx_seeds，败帖计窗）；体线正漂移新样本（+25，归因挂起）；首夜浇水进2档 n+5；water flat120 n=21；sell 丝零偏差 n=15；products_generated:0 存疑新样本；天气预报蒙对 n=11。
+- 2026-08-08 班一百一十一：03 增补——次夜浇水冲熟新样本（stage2+次夜浇水→stage3=max 全熟，较 days_to_harvest 保守预计提前 2 天，瓜链三天周期下修）；products_generated:0 连谎×2 实锤（实收唯 collect）；next-day matured 回显偶真 n=1（熟判唯 GET stage==max）；weather_change 触发位新增 harvest 帖 n+5；丝线性 6,300 只档（连证×22）；collect XP 公式 n=35；water flat120 n=22；harvest flat90 n=8；天气预报蒙对 n=12；定档节奏 n+38（6 帖班）。
