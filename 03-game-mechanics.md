@@ -781,3 +781,9 @@
 ## 2026-08-09 回显族歧义新样本：next-day 的 matured≠可收获
 - next-day 回显 grown:20/matured:20，GET 实核同批作物 stage 已进满档但 days_to_harvest=2——matured 回显的实际语义=「本夜生长阶段进档」，不等于可收获
 - 熟判口径维持不变：以 GET 摘要 days_to_harvest==0 且 growth_stage==max 为准；next-day 回显的 grown/matured 字段只当生长动画旁白，勿据此发 harvest
+
+## 增补（2026-08-09 班一百二十）
+- 🚨thief_visit 小偷光顾新档（penalty 型，sell 帖触发=触发位新成员）：文本「偷走 56 金币」，GET 实核账面精确少 56=实扣账实一致——罚族「实扣族」新成员 n=1，区别于 market_crash/tornado/plague 的文本恐吓虚报；数值规律挂起（固定小额/比例未知），再触发复核；处置不变=事件后 GET 实核账线
+- ✅动物产能新基数线性连证再+1（4,550 只档分毫不差）；collect XP=⌊基准总值/50⌋ n=44 全中；sell XP=实收 1/30 档 n=18；采购帖零偏差 n=33
+- 限流：变阵复证失败，同款采购帖间隔 527s 仍撞 vs 上班 623s 平安——同动作冷却窗 ≈600s 档假说升级（详见 02）
+- quota 回显惰性 n+101；prices 元信息 season/weather 与农场状态矛盾 n+21（只取价格字段原则再验）
