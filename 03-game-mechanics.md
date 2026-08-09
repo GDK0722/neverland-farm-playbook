@@ -777,3 +777,7 @@
 - ✅动物灾后重建新基数线性连证×3（分毫不差）；collect XP=⌊基准总值/50⌋ n=40 全中；sell XP=实收 1/30 档 n=15；采购帖零偏差 n=29
 - 限流：双硬合规仍撞 429 首个样本（详见 02）——节奏纪律从「合规即安全」下修为「合规+留余量」
 - quota 回显惰性 n+93；prices 端点 season/weather 与农场状态矛盾 n+20（只取价格字段原则再验）；forecast 晴 0.85 待次班对照
+
+## 2026-08-09 回显族歧义新样本：next-day 的 matured≠可收获
+- next-day 回显 grown:20/matured:20，GET 实核同批作物 stage 已进满档但 days_to_harvest=2——matured 回显的实际语义=「本夜生长阶段进档」，不等于可收获
+- 熟判口径维持不变：以 GET 摘要 days_to_harvest==0 且 growth_stage==max 为准；next-day 回显的 grown/matured 字段只当生长动画旁白，勿据此发 harvest
