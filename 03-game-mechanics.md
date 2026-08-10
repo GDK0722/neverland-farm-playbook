@@ -807,3 +807,8 @@
 - ✨crop_growth_boost 神奇肥料 n=2（reward 型，plant 帖触发=触发位新成员，water/plant 双位）：GET 实核刚种下的 20 株 growth_stage=1（正常应为 0）=「stage 提前进档」实落形式 n=2；净效果预期≈零（n=1 终审：熟成日不变），本批熟成日继续监视；文本「部分作物」vs 实核 20 株全体进档=「部分」口径再存疑 n=2
 - ✅动物产能线性连证再+1（3,000 只档分毫不差，基准总值精确命中）；collect XP=⌊基准总值/50⌋ n=51 全中；sell XP=实收 1/30 档 n=24；采购帖零偏差 n=41；plant 体力 12/格 n+11、XP 5/格 n=9
 - forecast 阴 0.85→次日实多云（蒙对 n=13）；quota 回显单帖 1/129 实动 n+114；next_reset 回显跳日异常 n=10
+
+## 增补（2026-08-10 班一百二十八）
+- ⚡thunder_storm 雷暴 n=3 定住混合型（disaster 型，collect 帖触发=触发位新成员）：文本「击毁 6 株作物」虚报——GET 实核 20 株全在=稻草人全挡 n=3；gold_loss 158+energy_loss 43 实扣账实一致——与 crop_disease/tornado 同族（文本物损虚报+金体线实扣）；数值规律挂起（158/43 是否固定小额待复验）；稻草人=保物不保钱不保体 n=4。处置不变=事件后 GET 实核账线
+- ✅动物产能线性连证再+1（3,200 只档分毫不差，基准总值精确命中）；collect XP=⌊基准总值/50⌋ n=52 全中；sell XP=实收 1/30 档 n=25；采购帖零偏差 n=42；water flat120 档 n=34
+- 卖出帖高危位本次干净：thief_visit 未再触发 n+4、energy_drain 未再触发 n+1；forecast 晴 0.85→次日实雨（再错 n+22）；quota 回显全惰性；next_reset 跳日异常 n=11
