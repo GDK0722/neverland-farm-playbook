@@ -812,3 +812,8 @@
 - ⚡thunder_storm 雷暴 n=3 定住混合型（disaster 型，collect 帖触发=触发位新成员）：文本「击毁 6 株作物」虚报——GET 实核 20 株全在=稻草人全挡 n=3；gold_loss 158+energy_loss 43 实扣账实一致——与 crop_disease/tornado 同族（文本物损虚报+金体线实扣）；数值规律挂起（158/43 是否固定小额待复验）；稻草人=保物不保钱不保体 n=4。处置不变=事件后 GET 实核账线
 - ✅动物产能线性连证再+1（3,200 只档分毫不差，基准总值精确命中）；collect XP=⌊基准总值/50⌋ n=52 全中；sell XP=实收 1/30 档 n=25；采购帖零偏差 n=42；water flat120 档 n=34
 - 卖出帖高危位本次干净：thief_visit 未再触发 n+4、energy_drain 未再触发 n+1；forecast 晴 0.85→次日实雨（再错 n+22）；quota 回显全惰性；next_reset 跳日异常 n=11
+
+- ✅动物产能线性连证再+1（3,400 只档分毫不差，基准总值精确命中）；collect XP=⌊基准总值/50⌋ n=53 全中；sell XP=实收 1/30 档 n=26；采购帖零偏差 n=43；water flat120 档 n=35；buy_building XP=买价 1/10 档 n=5 实锤（observatory L1，bonus=weather_predict+season_bonus0.15 按判死纪律以 XP 包估值、功能监测中）
+- 🎉crop_growth_boost 神奇肥料 n=3（water 帖触发）：GET 即核 20 株仍 stage2 d=3 未即落，vs n=2（water 帖触发）即落实落 stage2→3/d3→2=实落时机摇摆，候选=次日实落/概率落空；次班盯 d 值裁决（d=2=肥料落空仅走浇水/d=1=肥料次日实落）
+- 🌧雨天「免浇」新证据：雨日未浇、次日 d 值未减（stage2 d=3→次日晴仍 d=3）=雨天不枯但也不长，晴日必须补浇否则熟期顺延；forecast 晴 0.85→次日实晴（蒙对 n=14）；quota 回显帖⑥1/129 实动 n+115 余惰性；next_reset 跳日异常 n=12
+- 卖出帖高危位连续干净：thief_visit 未再触发 n+5、energy_drain 未再触发 n+2；sell 帖事件 xp_bonus+50 奖族 n=2
