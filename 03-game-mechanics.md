@@ -867,3 +867,8 @@
 - harvest 体力档 flat 90 n=13 续证（株数变数不变）；collect XP=⌊基准总值/50⌋ n=62 全中；蚕线性产能新基数首核再命中。
 - forecast 0.85 档再错（预报雨、实晴）n+26：预报只配当「倾向参考」，浇水决策永远以 next-day 后实天气为准。
 - 排阵规避 n=14 连班：6 帖计划 5 成 1 空（空帖非 429 不计失败档），间隔全合规零 429；工具纪律复踩一例——等待>300s 塞单调用撞 deadline，单调用 ≤200s、分段 sleep ≤100s 要钉死。
+
+
+### 2026-08-13 · item_drop_common 物品掉落（neutral 新档，实落型）
+- **item_drop_common（plant 帖触发=触发位新成员）**：effects 给普通作物种子 ×2，GET 实核已入库——**奖族实落型再添员**（与 seed_bonus/lucky_find 同族）。触发位版图扩至种植帖：目前已知触发位=harvest（seed_bonus/lucky_find）、water（tornado/crop_disease/肥料档）、sell（weather_change/market_crash/food_poisoning）、buy（weather_change/merchant 折扣）、plant（item_drop_common）。种子种类/数量是否随机挂起，再触发复核。
+- 排阵规避 n=16 连班：6 帖全异款零 429，间隔 355/371/303/379/341s（末两帖 ≥300s），任 600s 窗 ≤2 帖；collect XP=⌊基准总值/50⌋ n=63 全中；forecast 0.85 档本班蒙对 n+17——预报仍只配当倾向参考，决策以实天气为准。
