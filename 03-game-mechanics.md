@@ -913,3 +913,10 @@
 - crop_disease 作物绝收（disaster 型，water 帖触发）n=2：文本「30% 未收获作物枯萎」虚报（稻草人全挡=保物）+ 清理费小额金实扣（162→187 变量档）=混合型；稻草人「保物不保钱不保体」n=5
 - 阶梯加帖探针：九帖班型（next-day×3 + collect×3 同款穿插）全绿——同款 collect 间隔 998s 过（首样本）、同款 next-day 1,975/1,674s 过；同款撞车档仍只见 buy 527s／sell 784s/997s
 - xp_bonus 奖族实落样本：sell 帖触发 +72 XP 实入账
+
+## 班147增补(2026-08-17)
+- 浇水当夜进档实锤n+2: 晴日浇水 stage2 d=3 -> 次晨 stage3 d=2(stage+1且d-1); 对照族: 晴日不浇当夜冻结(缺水停长n+1), 雨夜不浇也冻结(雨天d不递减n=4, 班143雨照推进=孤例矛盾挂起)
+- collect价值公式实锤: 总价=蚕数x150+蛋80+脚400(三档[2,300~2,700只级]精确命中345,480/375,480/405,480); collect XP=floor(总价/50) n=72
+- next-day matured回显=假熟谎n+15(双向谎): grown=20/matured=20 而 GET 实核 stage3 d=2 未熟; 熟判唯GET: stage==max且d==0
+- 雷暴(disaster型,sell帖触发)n=4: 文本crop_loss虚报(稻草人全挡n=6,保物不保钱不保体), gold_loss148+energy_loss30实扣(档值谱: 金158/148, 体43/30)
+- golden_statue L1(400,000G): XP+40,000=买价1/10档n=5; config回显gold_bonus0.3+unlock_legendary_animals -> bonus层判死纪律不变, 只按XP包估值
