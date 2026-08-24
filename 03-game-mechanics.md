@@ -1085,3 +1085,7 @@
 
 ### 工程学费：GitHub 写回 sha 须存完整值
 - PUT 响应的 content.sha 截断复用→409；完整保存即过（0 帖损）
+
+### 🍂crop_wilt 作物枯萎 n=1 首录＝气氛组
+- penalty 型，water 帖触发；effects{crop_loss:2}，GET 实核在田 20/20 全在零实损＝稻草人挡（株损虚报族再添一员，与 seed_rot/gopher_dig 同档案）
+- 铁律不变：事件文本只当气氛组，损失以 status 实核为准；再触发复核数值规律
