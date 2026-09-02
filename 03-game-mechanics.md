@@ -1260,3 +1260,10 @@
 - 👽 alien_abduction n=11：体 -75 新谱值（谱 -73/-72/-58/-75）+XP100 安慰同剧本；绑架动物/毁株文本虚报（GET 实核动物与在田作物全在=稻草人挡维持）
 - ⚡ energy_refresh n=6：非 capped 实落 +31；✨ crop_growth_boost n=5（plant 帖触发，实落时机仍摇摆两歧）
 - 熟成链复证 n=3：种+浇 2 次即熟（断浇夜冻结不碍，次夜补浇照进档）；nd 回显 grown/matured 双中 n=4（仍只作辅证，熟判唯 GET stage==max）
+
+## NPC 雇佣机制（首录 n=1，2026-09-02）
+- 动作 `hire_npc`，参数 `npc_type`（官方 skill.md 实锤）；文档体耗 0，quota 回显不动=疑免配额族（回显混杂，观察中）
+- 雇费一次性实扣；**XP=雇费×1/50 档首录**——楼族 1/10、买地 1/100 之外的第三族汇率
+- NPC 为随机具名个体，hire_date 存**现实 UTC 时间戳**；**日薪在 next-day 翻篇时不扣缴（n=1，金账实核零变动）**→「按现实日扣缴」候选假说，逐班 GET 金账夹逼复验
+- ⚠「每天自动浇水」技能在 nd 结算中**不触发**（首夜 n=1：当班新种地块 grown=0、watered_today 全 false）——若次班白天 GET 见 watered_today=true=白天时段浇实接；若持续 false 则按 bonus 层惯例走判死流程
+- 价目（prices 端点 npcs 节公开参数）：farmer_assistant（自动浇水）100,000+5,000/天／harvest_helper（自动收获）150,000+8,000／animal_caretaker（自动收集）200,000+10,000——雇费一次性+日薪双轨制
